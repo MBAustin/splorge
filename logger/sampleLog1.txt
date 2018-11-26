@@ -1,0 +1,16 @@
+call A.foo() 0
+call B.bar() 25
+exit B.bar() 37
+exit A.foo() 49
+call A.baz() 78
+call C.biff() 182
+exit C.biff() 190
+call C.biff() 191
+exit C.biff() 197
+call C.biff() 198
+exit C.biff() 204
+call C.biff() 205
+exit C.biff() 211
+call C.biff() 212
+exit C.biff() 218
+exit A.baz() 242
