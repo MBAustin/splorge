@@ -1,0 +1,16 @@
+call bar
+exit bar
+call Wow.cool
+exit Wow.cool
+call beep
+exit beep
+call foo
+exit foo
+call bar
+exit bar
+call bar
+exit bar
+call baz
+exit baz
+call faa
+exit faa
