@@ -19,6 +19,7 @@ current_node_list = []
 current_edge_list = []
 name_list = []
 depth_list = []
+size_list = []
 maxX = []
 maxY = []
 minX = []
@@ -31,6 +32,14 @@ def parse_nodes(node_data, depth):
     depth_list.append(depth)
     node = (node_data['name'], node_data['time'])
     name_list.append(node_data['name'])
+
+    if current_node_list:
+        start_time = current_node_list[-1][1]
+        time_span = int(node_data['time']) - int(start_time)
+        size_list.append(time_span + 30)
+    else:
+        size_list.append(30)
+
     current_node_list.append(node)
     node_lists.append(current_node_list.copy())
     edge_lists.append(current_edge_list.copy())
@@ -79,7 +88,8 @@ def build_data(digraph):
                 showscale=False,
                 color=[color_list[depth-1 % len(color_list)] for depth in depth_list],
                 opacity=1,
-                size= [(start_size * 1/(depth)) for depth in depth_list],
+                #size= [(start_size * 1/(depth)) for depth in depth_list],
+                size= size_list,
                 line=go.Line(width=1, color='rgb(0,0,0)')))
 
     edgesX = []
