@@ -26,20 +26,21 @@ minX = []
 minY = []
 color_list = ['rgb(200,0,0)', 'rgb(200,200,0)', 'rgb(200,0,200)', 'rgb(0,200,0)', 'rgb(0,200,200)',
               'rgb(100,0,0)', 'rgb(100,100,0)', 'rgb(100,0,100)', 'rgb(0,100,0)', 'rgb(0,100,100)',
-              'rgb(50,60,70)', 'rgb(80,70,60)', 'rgb(255,150,100)', 'rgb(100,150,255)', 'rgb(150,255,100)', ]
+              'rgb(50,60,70)', 'rgb(80,70,60)', 'rgb(255,150,100)', 'rgb(100,150,255)', 'rgb(150,255,100)']
 
 def parse_nodes(node_data, depth):
     depth_list.append(depth)
     node = (node_data['name'], node_data['time'])
-    name_list.append(node_data['name'])
-
+    time_span = 0
     if current_node_list:
         start_time = current_node_list[-1][1]
         time_span = int(node_data['time']) - int(start_time)
-        size_list.append(time_span + 30)
-    else:
-        size_list.append(30)
 
+    size_list.append(time_span + 30)
+    if time_span > 0:
+        name_list.append(node_data['name'] + ': ' + str(time_span) + ' ms')
+    else:
+        name_list.append(node_data['name'])
     current_node_list.append(node)
     node_lists.append(current_node_list.copy())
     edge_lists.append(current_edge_list.copy())
