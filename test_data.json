@@ -1,0 +1,48 @@
+{
+    "name": "Program",
+    "time": 0,
+    "children": [
+        {
+            "name": "A.foo()",
+            "time": "0",
+            "children": [
+                {
+                    "name": "B.bar()",
+                    "time": "25",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "A.baz()",
+            "time": "78",
+            "children": [
+                {
+                    "name": "C.biff()",
+                    "time": "182",
+                    "children": []
+                },
+                {
+                    "name": "C.biff()",
+                    "time": "191",
+                    "children": []
+                },
+                {
+                    "name": "C.biff()",
+                    "time": "198",
+                    "children": []
+                },
+                {
+                    "name": "C.biff()",
+                    "time": "205",
+                    "children": []
+                },
+                {
+                    "name": "C.biff()",
+                    "time": "212",
+                    "children": []
+                }
+            ]
+        }
+    ]
+}
