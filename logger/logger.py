@@ -30,7 +30,8 @@ def log_function(method):
         methodName += method.__name__
         with open("out.txt", "a") as out_file:
             out_file.write("call " + methodName + "\\n")
-            result = method(*args, **kw)
+        result = method(*args, **kw)
+        with open("out.txt", "a") as out_file:
             out_file.write("exit " + methodName + "\\n")
         return result
     return log
