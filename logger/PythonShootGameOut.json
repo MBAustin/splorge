@@ -1,0 +1,90 @@
+{
+    "name": "Program",
+    "time": 0,
+    "children": [
+        {
+            "name": "main",
+            "time": "1",
+            "children": [
+                {
+                    "name": "Menu.start",
+                    "time": "4",
+                    "children": [
+                        {
+                            "name": "Game.__init__",
+                            "time": "5",
+                            "children": [
+                                {
+                                    "name": "Draw.text",
+                                    "time": "6",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Player.__init__",
+                                    "time": "9",
+                                    "children": [
+                                        {
+                                            "name": "Player.add_internal",
+                                            "time": "10",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Mob.__init__",
+                                    "time": "20",
+                                    "children": [
+                                        {
+                                            "name": "Mob.newMob",
+                                            "time": "25",
+                                            "children": [
+                                                {
+                                                    "name": "Mob.add_internal",
+                                                    "time": "100",
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Game.update",
+                    "time": "175",
+                    "children": [
+                        {
+                            "name": "Player.update",
+                            "time": "200",
+                            "children": [
+                                {
+                                    "name": "Player.shoot",
+                                    "time": "225",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Player.move",
+                                    "time": "250",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Mob.update",
+                            "time": "325",
+                            "children": [
+                                {
+                                    "name": "Mob.shoot",
+                                    "time": "350",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

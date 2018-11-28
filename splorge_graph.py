@@ -8,7 +8,7 @@ warnings.filterwarnings("ignore")
 
 
 
-filename = 'test_data.json'
+filename = 'logger/PythonShootGameOut.json'
 with open(filename) as log_json:
     data_dict = json.load(log_json)
 
@@ -38,7 +38,8 @@ def parse_nodes(node_data, depth):
 
     size_list.append(time_span + 30)
     if time_span > 0:
-        name_list.append(node_data['name'] + ': ' + str(time_span) + ' ms')
+        # name_list.append(node_data['name'] + ': ' + str(time_span) + ' ms')
+        name_list.append(node_data['name'])
     else:
         name_list.append(node_data['name'])
     current_node_list.append(node)
